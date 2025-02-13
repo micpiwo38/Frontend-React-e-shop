@@ -1,0 +1,18 @@
+{
+  "produits": [
+    {
+      "id": "f02e",
+      "product_name": "SNES",
+      "product_description": "La console 16 bits de NINTENDO",
+      "product_price": "125.25",
+      "product_image": "/img/1739461270039.png"
+    },
+    {
+      "id": "37e3",
+      "product_name": "Megadrive",
+      "product_description": "La console mini de SEGA Japon 16 BITS",
+      "product_price": "7458.25",
+      "product_image": "/img/1739461783828.jpg"
+    }
+  ]
+}
