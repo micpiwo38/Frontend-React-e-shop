@@ -1,6 +1,8 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import bcrypt from 'bcryptjs';
+import { Redirect } from 'react-router-dom';
+import Profile from '../Profile/Profile';
 
 const Login = () => {
   //States
@@ -8,6 +10,7 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const [erreur, setErreur] = useState(Boolean);
   const [is_login, setIsLogin] = useState(false);
+  const [user, setUser] = useState(null);
   //Actions
   const user_login = async(event) => {
     event.preventDefault();
@@ -25,6 +28,10 @@ const Login = () => {
           const user_id = user.id;
           localStorage.setItem("token", user_token);
           setIsLogin(true);
+          setUser(user);
+          if(is_login){
+            window.location.href = `/profile/${user_id}`;
+          }
       }else{
         alert("Erreur de connexion !");
         console.log(is_match);
@@ -42,14 +49,13 @@ const Login = () => {
     localStorage.removeItem("token");
     setIsLogin(false);
   }
+
   //Renderer
   return(
     <div className='container shadow rounded p-3 mt-5'>
       {is_login ?(
-        <div className='alert alert-success mt-3'>
-          <h2 className='text-info'>Vous êtes connecté !</h2>
-          <p>{email}</p>
-          <button type='button' className='btn btn-danger mt-3' onClick={user_logout}>DECONNEXION</button>
+        <div>
+          <Profile user={user} is_login={is_login}/>
         </div>
       ):(
         <div>

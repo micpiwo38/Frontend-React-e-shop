@@ -12,6 +12,7 @@ import Home from './components/Home/Home';
 import PageNotFound from './components/PageNotFound/PageNotFound';
 import Register from './components/Register/Register';
 import Login from './components/Login/Login';
+import Profile from './components/Profile/Profile';
 
 const router = createBrowserRouter([
   {
@@ -37,6 +38,11 @@ const router = createBrowserRouter([
   {
     path: "/connexion",
     element: <Login/>,
+    errorElement: <PageNotFound/>
+  },
+  {
+    path: "/profile/:id",
+    element: <Profile/>,
     errorElement: <PageNotFound/>
   }
 ])
