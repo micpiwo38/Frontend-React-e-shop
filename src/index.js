@@ -10,6 +10,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import "bootswatch/dist/lux/bootstrap.css";
 import Home from './components/Home/Home';
 import PageNotFound from './components/PageNotFound/PageNotFound';
+import Register from './components/Register/Register';
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,11 @@ const router = createBrowserRouter([
     element: <Products/>,
     errorElement: <PageNotFound/>
   },
+  {
+    path: "/inscription",
+    element: <Register/>,
+    errorElement: <PageNotFound/>
+  }
 ])
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
