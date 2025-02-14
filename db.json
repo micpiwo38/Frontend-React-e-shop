@@ -22,13 +22,5 @@
       "product_image": "/img/1739525797113.jpg"
     }
   ],
-  "users": [
-    {
-      "id": "973d",
-      "username": "mic",
-      "email": "mic@gmail.com",
-      "password": "$2b$10$nXSxcBZ9/zUiZdBKLJiJ..eD/ta2phGqoxoPnMH1XzNFSmDb9pwCS",
-      "role": 0
-    }
-  ]
+  "users": []
 }
