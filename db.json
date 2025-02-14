@@ -24,38 +24,10 @@
   ],
   "users": [
     {
-      "id": "1",
-      "username": "administrateur",
-      "email": "admin@admin.com",
-      "password": "admin",
-      "role": 1
-    },
-    {
-      "id": "2",
-      "username": "michael",
+      "id": "973d",
+      "username": "mic",
       "email": "mic@gmail.com",
-      "password": "mic",
-      "role": 0
-    },
-    {
-      "id": "3",
-      "username": "lucie",
-      "email": "lucie@laposte.net",
-      "password": "lucie",
-      "role": 0
-    },
-    {
-      "id": "6681",
-      "username": "bob",
-      "email": "bob@gmail.com",
-      "password": "azerty",
-      "role": 0
-    },
-    {
-      "id": "cafd",
-      "username": "amelie38",
-      "email": "amelie38@gmail.com",
-      "password": "$2b$10$PWDaa7M7dwMj2.lqYvmTdO1VtZaH3l1v5Ib.nlwpJe6vq5jbM/tiu",
+      "password": "$2b$10$nXSxcBZ9/zUiZdBKLJiJ..eD/ta2phGqoxoPnMH1XzNFSmDb9pwCS",
       "role": 0
     }
   ]

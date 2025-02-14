@@ -5,7 +5,7 @@ import bcrypt from 'bcryptjs';
 
 const Register = () => {
   //States
-  const salt = bcrypt.genSaltSync(10);
+  
   const user_object = {
     id: null,
     username: "",
@@ -17,7 +17,6 @@ const Register = () => {
   const [user, setUser] = useState(user_object);
   const [form_is_submit, setFormIsSubmit] = useState(false);
 
-  const hash_password = bcrypt.hashSync(user_object.password, salt);
   //Actions
 
   //Analyse de l'etat des champs du formulaire
@@ -30,6 +29,9 @@ const Register = () => {
   } 
 
   const save_user = async() => {
+    const salt = bcrypt.genSaltSync(10);
+    const hash_password = bcrypt.hashSync(user.password, salt);
+
     let new_user = {
       username: user.username,
       email: user.email,

@@ -11,6 +11,7 @@ import "bootswatch/dist/lux/bootstrap.css";
 import Home from './components/Home/Home';
 import PageNotFound from './components/PageNotFound/PageNotFound';
 import Register from './components/Register/Register';
+import Login from './components/Login/Login';
 
 const router = createBrowserRouter([
   {
@@ -31,6 +32,11 @@ const router = createBrowserRouter([
   {
     path: "/inscription",
     element: <Register/>,
+    errorElement: <PageNotFound/>
+  },
+  {
+    path: "/connexion",
+    element: <Login/>,
     errorElement: <PageNotFound/>
   }
 ])
