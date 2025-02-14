@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { use, useEffect, useState } from 'react';
 import NavBar from '../NavBar/NavBar';
 import axios from 'axios';
 import ProductDetails from './ProductDetails';
 import AddProduct from './AddProduct';
+import UpdateProduct from './UpdateProduct';
 
 
 const Products = () => {
@@ -11,6 +12,8 @@ const Products = () => {
   const [products, setProducts] = useState([]);
   //Un seul produit
   const [selectedProduct, setSelectedProduct] = useState(null);
+  //Edit ou ADD
+  const [editProduct, setEditProduct] = useState(false);
 
   //Actions
   const display_products = () => {
@@ -48,6 +51,11 @@ const Products = () => {
     
   }
 
+  const switch_edit_mode = (product) => {
+    setEditProduct(editProduct => !editProduct);
+    setSelectedProduct(product);
+  }
+
   //Auto call via use effect
   useEffect(() => {
     display_products();
@@ -74,13 +82,18 @@ const Products = () => {
                   </div>
                   <button type='button' className='btn btn-info' onClick={() => display_one_product(product)}>Détails du produit</button>
                   <button className='btn btn-danger mx-3' onClick={() => delete_product(product.id)}>X</button>
+                  <button className='btn btn-warning mx3' onClick={() => switch_edit_mode(product)}>Editer</button>
                 </div>
               </div>
               )}
             </div>
             <div className='col-md-4 col-sm-12'>
                 <ProductDetails product={selectedProduct}/>
-                <AddProduct onProductAdded={handle_product_added}/>
+                {editProduct ? (
+                    <UpdateProduct product={selectedProduct} onProductUpdated={handle_product_added}/>
+                ) : (
+                    <AddProduct onProductAdded={handle_product_added}/>
+                )}
             </div>
           </div>
       </div>

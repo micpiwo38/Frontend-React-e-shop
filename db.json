@@ -2,17 +2,24 @@
   "produits": [
     {
       "id": "f02e",
-      "product_name": "SNES",
-      "product_description": "La console 16 bits de NINTENDO",
-      "product_price": "125.25",
+      "product_name": "SNES Mini",
+      "product_description": "La console 16 bits de nintendo japon en version mini",
+      "product_price": "225.35",
       "product_image": "/img/1739461270039.png"
     },
     {
       "id": "37e3",
-      "product_name": "Megadrive",
-      "product_description": "La console mini de SEGA Japon 16 BITS",
-      "product_price": "7458.25",
+      "product_name": "Megadrive MINI",
+      "product_description": "La console SEGA 16 Bits de SEGA en version mini",
+      "product_price": "245.35",
       "product_image": "/img/1739461783828.jpg"
+    },
+    {
+      "id": "7341",
+      "product_name": "Neo Geo AES",
+      "product_description": "La console de SNK AES copie de l'arcade MVS",
+      "product_price": "11252.35",
+      "product_image": "/img/1739525797113.jpg"
     }
   ]
 }
