@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/micpiwo38/Frontend-React-e-shop/tree/main/static/css/main.d5b254d4.css",
+    "main.js": "/micpiwo38/Frontend-React-e-shop/tree/main/static/js/main.200a7cb6.js",
+    "static/js/488.c48ef1ed.chunk.js": "/micpiwo38/Frontend-React-e-shop/tree/main/static/js/488.c48ef1ed.chunk.js",
+    "index.html": "/micpiwo38/Frontend-React-e-shop/tree/main/index.html",
+    "main.d5b254d4.css.map": "/micpiwo38/Frontend-React-e-shop/tree/main/static/css/main.d5b254d4.css.map",
+    "main.200a7cb6.js.map": "/micpiwo38/Frontend-React-e-shop/tree/main/static/js/main.200a7cb6.js.map",
+    "488.c48ef1ed.chunk.js.map": "/micpiwo38/Frontend-React-e-shop/tree/main/static/js/488.c48ef1ed.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d5b254d4.css",
+    "static/js/main.200a7cb6.js"
+  ]
+}
