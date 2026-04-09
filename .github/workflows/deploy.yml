@@ -1,0 +1,38 @@
+name: React CI/CD #nom du workflow (flux de travail)
+
+# Déclencheur (Trigger) : Quand le workflow doit il s'executer ?
+on:
+    push:
+        branches: [main] #Déclencher a chaque push sur la branche main
+# Jobs = les taches a executés
+jobs:
+    build-and-deploy:
+        runs-on: ubuntu-latest # Os du conteneur ou environement d'execution des taches
+
+        steps:
+            #1. Récuperer le code source du dépôt github
+            #On utilise des actions préfaite de github-action
+            - name: Checkout code
+              uses: actions/checkout@v4
+
+            #2. Installer nodeJS
+            - name: Install Node.js
+              uses: actions/setup-node@v4
+              with:
+                  node-version: 18 #Version de nodeJS
+                  cache: "npm" #Mise en cache du gestionnaire de paquet
+            #3. Installer les dépendances du fichier package.json
+            - name: Install dependencies
+              run: npm install
+            #4. Lancer les tests (unitaires, fonctionnel, end2end)
+            - name: Run Tests
+              run: npm test -- --watchAll=true
+            #5. Construire l'application dans un dossier /build
+            - name: Build
+              run: npm run build
+            #6. Deploiement sur Github Pages
+            - name: Deploy to Github Pages
+              uses: JamesIves/github-pages-deploy-action@v4 #Script de l'utilisateur James Ives => Récupère le dossier /build et l'envois sur la branche gh-pages
+              with:
+                  folder: build # Le dossier a publié
+                  branch: gh-pages # Branche de destination pour l"hebergement

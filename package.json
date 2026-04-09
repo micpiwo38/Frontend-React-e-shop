@@ -42,10 +42,14 @@
     ]
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "jest": "^27.5.1",
     "web-vitals": "^4.2.4"
   },
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "index.js",
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "homepage": "https://github.com/micpiwo38/Frontend-React-e-shop/tree/main"
 }
