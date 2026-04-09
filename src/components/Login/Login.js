@@ -28,6 +28,7 @@ const Login = () => {
         localStorage.setItem("token", user_token);
         setIsLogin(true);
         setUser(user);
+        setErreur(false);
         if (is_login) {
           window.location.href = `/profile/${user_id}`;
         }
@@ -54,6 +55,9 @@ const Login = () => {
       {is_login ? (
         <div>
           <Profile user={user} is_login={is_login} />
+          <button onClick={user_logout} className="btn btn-danger">
+            Deconnexion
+          </button>
         </div>
       ) : (
         <div>
