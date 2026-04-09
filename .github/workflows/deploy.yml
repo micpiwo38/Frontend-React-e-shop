@@ -26,7 +26,7 @@ jobs:
               run: npm install
             #4. Lancer les tests (unitaires, fonctionnel, end2end)
             - name: Run Tests
-              run: npm test -- --watchAll=true
+              run: npm test -- --watchAll=false #Stop le mode Jest interactif (si true : il attend des changements constant dans le code)
             #5. Construire l'application dans un dossier /build
             - name: Build
               run: npm run build
